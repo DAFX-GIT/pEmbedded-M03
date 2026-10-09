@@ -2,7 +2,7 @@
 #include <util/delay.h>
 
 void init_rgb() {
-	DDRD |= (1 << PD6) | (1 << PD5) | (1 << PB3);
+	DDRD |= (1 << PD6) | (1 << PD5) | (1 << PD3);
 
 	//timer0
 	TCCR0A = (1 << COM0A1) | (1 << COM0B1) | (1 << WGM01) | (1 << WGM00);

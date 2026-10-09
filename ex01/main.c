@@ -4,7 +4,7 @@
 
 static void set_rgb(uint8_t r, uint8_t g, uint8_t b)
 {
-	PORTD &= ~((1 << PD6) | (1 << PD5) | (1 << PB3));
+	PORTD &= ~((1 << PD6) | (1 << PD5) | (1 << PD3));
     if (r) PORTD |= (1 << PD5);
     if (g) PORTD |= (1 << PD6);
     if (b) PORTD |= (1 << PD3);
@@ -12,7 +12,7 @@ static void set_rgb(uint8_t r, uint8_t g, uint8_t b)
 
 
 int main () {
-	DDRD |= (1 << PD6) | (1 << PD5) | (1 << PB3);
+	DDRD |= (1 << PD6) | (1 << PD5) | (1 << PD3);
 	while (1) {
 		set_rgb(255, 0, 0);
 		_delay_ms(1000);
